@@ -141,8 +141,10 @@ Dropzone.options.imageForm = {
     dictDefaultMessage: "Drop your image here or click for proofing the origin.",
     init: function () {
         this.on("addedfile", function (file) {
-            var reader = new FileReader();
 
+            $('.alert').hide();
+
+            var reader = new FileReader();
             reader.onload = function (e) {
                 var arrayBuffer = reader.result;
 
