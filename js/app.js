@@ -149,7 +149,8 @@ Dropzone.options.imageForm = {
                 var arrayBuffer = reader.result;
 
                 // get hash of image
-                var base64String = btoa(String.fromCharCode.apply(null, new Uint8Array(arrayBuffer)));
+                var base64String = arrayBufferToBase64(arrayBuffer);
+                // var base64String1 = btoa(String.fromCharCode.apply(null, new Uint8Array(arrayBuffer)));
                 var imageHash = new Hashes.SHA256().hex(base64String);
                 console.log('Hash of image: ' + imageHash);
 
@@ -189,6 +190,16 @@ Dropzone.options.imageForm = {
         });
     }
 };
+
+function arrayBufferToBase64(buffer) {
+    let binary = '';
+    let bytes = new Uint8Array(buffer);
+    let len = bytes.byteLength;
+    for (let i = 0; i < len; i++) {
+        binary += String.fromCharCode(bytes[i]);
+    }
+    return window.btoa(binary);
+}
 
 $(document).ready(function () {
 
