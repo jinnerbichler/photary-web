@@ -150,7 +150,6 @@ Dropzone.options.imageForm = {
 
                 // get hash of image
                 var base64String = arrayBufferToBase64(arrayBuffer);
-                // var base64String1 = btoa(String.fromCharCode.apply(null, new Uint8Array(arrayBuffer)));
                 var imageHash = new Hashes.SHA256().hex(base64String);
                 console.log('Hash of image: ' + imageHash);
 
@@ -172,7 +171,7 @@ Dropzone.options.imageForm = {
                     })
                     .then(function (storedData) {
                         var storedHashes = Object.keys(storedData);
-                        if (storedHashes.indexOf(imageHash)) {
+                        if (storedHashes.indexOf(imageHash) > 0) {
                             imageValid(file, stellarAccount);
                         }
                         else {
