@@ -44,7 +44,28 @@
                         </form>
                         <div class="alert alert-success" id="imageValidAlert"
                              role="alert">
-                            Origin of image can be verfied on account <a href="#" class="alert-link">XXXXX</a>.
+                            <h1>
+                                Origin sucessfully verified.
+                            </h1>
+                            <table id="meta-table">
+                                <tr>
+                                    <th class="meta-header">Owner: </th>
+                                    <td id="meta-owner"></td>
+                                </tr>
+                                <tr>
+                                    <th class="meta-header">Date: </th>
+                                    <td id="meta-date"></td>
+                                </tr>
+                                <tr>
+                                    <th class="meta-location">Location: </th>
+                                    <td id="meta-location"><a href="#" class="alert-link">XXXXX</a></td>
+                                </tr>
+                                <tr>
+                                    <th class="meta-header">Account: </th>
+                                    <td id="meta-account"><a href="#" class="alert-link">XXXXX</a>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                         <div class="alert alert-danger" id="imageInvalidAlert"
                              role="alert">
@@ -73,6 +94,7 @@
 <script src="js/lib/hashes.js"></script>
 <script src="js/lib/exif.js"></script>
 <script src="js/lib/stellar-sdk.js"></script>
+<script src="js/lib/geopoint.js"></script>
 <script src="js/app.js"></script>
 
 </body>

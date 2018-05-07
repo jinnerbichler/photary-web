@@ -449,3 +449,24 @@ canvas {
     margin-top: 20px;
 }
 
+.alert h1 {
+    font-size: 1.01rem;
+}
+
+#meta-table tr {
+    line-height: 20px;
+}
+
+.alert-link {
+    font-weight: 100;
+    text-decoration: underline;
+}
+
+#meta-table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.meta-header {
+    padding-right: 10px;
+}

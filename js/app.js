@@ -118,12 +118,26 @@ particlesJS('particles-js',
     }
 );
 
-function imageValid(file, accountId) {
+function imageValid(file, exifData, accountId) {
     $('.alert').hide();
     var alertUrl = 'https://testnet.steexp.com/account/' + accountId;
-    $('#imageValidAlert').find('a').attr("href", alertUrl);
-    $('#imageValidAlert').find('a').text(accountId);
-    $('#imageValidAlert').show();
+    var validAlert = $('#imageValidAlert');
+    validAlert.find('#meta-account a').attr("href", alertUrl);
+    validAlert.find('#meta-account a').text(accountId);
+    validAlert.find('#meta-owner').text(exifData.Make);
+    validAlert.find('#meta-date').text(exifData.DateTimeDigitized);
+
+    // convert GPS location
+    var gpsLon = exifData.GPSLongitude;
+    var gpsLat = exifData.GPSLatitude;
+    var lon = gpsLon[0] + "° " + gpsLon[1] + "'" + gpsLon[2] + "\"";
+    var lat = gpsLat[0] + "° " + gpsLat[1] + "'" + gpsLat[2] + "\"";
+    var point = new GeoPoint(lon, lat);
+    var urlLocation = point.getLatDec() + "," + point.getLonDec();
+    validAlert.find('#meta-location a').text("Google Maps");
+    validAlert.find('#meta-location a').attr("href", "http://maps.google.com/maps?q=" + urlLocation);
+
+    validAlert.show();
 }
 
 function imageInvalid(file) {
@@ -154,6 +168,7 @@ Dropzone.options.imageForm = {
                 console.log('Hash of image: ' + imageHash);
 
                 // get Stellar account id
+                EXIF.enableXmp();
                 var exifData = EXIF.readFromBinaryFile(arrayBuffer);
                 if (exifData.UserComment === undefined) { // check if account id is stored
                     imageInvalid(file);
@@ -172,7 +187,7 @@ Dropzone.options.imageForm = {
                     .then(function (storedData) {
                         var storedHashes = Object.keys(storedData);
                         if (storedHashes.indexOf(imageHash) > 0) {
-                            imageValid(file, stellarAccount);
+                            imageValid(file, exifData, stellarAccount);
                         }
                         else {
                             imageInvalid(file);
