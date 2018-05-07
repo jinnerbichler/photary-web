@@ -120,7 +120,7 @@ particlesJS('particles-js',
 
 function imageValid(file, accountId) {
     $('.alert').hide();
-    var alertUrl = 'http://testnet.stellarchain.io/address/' + accountId;
+    var alertUrl = 'https://testnet.steexp.com/account/' + accountId;
     $('#imageValidAlert').find('a').attr("href", alertUrl);
     $('#imageValidAlert').find('a').text(accountId);
     $('#imageValidAlert').show();
