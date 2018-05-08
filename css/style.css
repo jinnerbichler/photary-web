@@ -9,7 +9,8 @@ html, body, div, span, object, iframe, p, blockquote, pre, abbr, address, cite, 
     outline: 0;
     font-size: 100%;
     vertical-align: baseline;
-    background: transparent
+    background: transparent;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 body {
@@ -109,11 +110,11 @@ canvas {
 }
 
 .dropzone {
-    min-height: 150px;
-    width: 50%;
-    margin-left: 25%;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 54px 54px;
+    min-height: 100px;
+    width: 40%;
+    margin-left: 30%;
+    background: rgba(96, 196, 194, 0.9);
+    padding: 30px 30px;
     border-radius: 10px;
 }
 
@@ -407,7 +408,7 @@ canvas {
 }
 
 #particles-js {
-    background-color: #b61924;
+    background-color: #F39932;
     background-image: url('');
     background-size: cover;
     background-position: 50% 50%;
@@ -435,7 +436,6 @@ canvas {
 
 #main-headers h2 {
     font-family: 'Rajdhani', sans-serif;
-    /*font-family: 'IBM Plex Mono', monospace;*/
     text-align: center;
     margin-top: 30px;
     margin-bottom: 50px;
@@ -444,8 +444,8 @@ canvas {
 
 .alert {
     display: none;
-    width: 50%;
-    margin-left: 25%;
+    width: 40%;
+    margin-left: 30%;
     margin-top: 20px;
 }
 
@@ -469,4 +469,48 @@ canvas {
 
 .meta-header {
     padding-right: 10px;
+}
+
+#more-info {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+}
+
+#more-info a {
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 1.5em;
+}
+
+.sub-content {
+    position: absolute;
+    top: 99%;
+    left: 0;
+}
+
+#info-flow {
+    background-color: white;
+    padding: 60px 0;
+}
+
+#info-flow h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#info-flow img {
+    margin-left: 20%;
+    width: 60%;
+}
+
+footer {
+    background-color: #656565;
+}
+
+.footer {
+    margin: 30px 0;
+    color: white;
 }
