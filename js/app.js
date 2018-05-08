@@ -137,6 +137,15 @@ function imageValid(file, exifData, accountId) {
     validAlert.find('#meta-location a').text("Google Maps");
     validAlert.find('#meta-location a').attr("href", "http://maps.google.com/maps?q=" + urlLocation);
 
+    // custom metadata
+    try {
+        const imageDescription = JSON.parse(exifData.ImageDescription);
+        validAlert.find('#meta-deviceid').text(imageDescription.deviceID)
+    }
+    catch (e) {
+        console.log(e)
+    }
+
     validAlert.show();
 }
 
