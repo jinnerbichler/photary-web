@@ -229,4 +229,8 @@ $(document).ready(function () {
     StellarSdk.Network.useTestNetwork();
     console.log("document loaded");
 
+    $('.close').click(function () {
+        $('.alert').hide();
+    });
+
 });
