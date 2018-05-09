@@ -117,7 +117,7 @@ canvas {
     min-height: 64px;
     width: 30%;
     margin-left: 35%;
-    background: #89D7C9 ;
+    background: #89D7C9;
     padding: 15px 15px;
     border-radius: 10px;
 }
@@ -525,4 +525,29 @@ footer {
 .footer {
     margin: 30px 0;
     color: white;
+}
+
+/* Smartphones */
+@media all and (max-width: 770px) {
+    .dropzone {
+        display: none;
+        height: 0;
+    }
+
+    .sub-content {
+        top: 35%
+    }
+
+    #logo-top {
+        width: 75%;
+    }
+
+    #info-flow img {
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    #main-headers h2 {
+        margin-top: 20px;
+    }
 }
