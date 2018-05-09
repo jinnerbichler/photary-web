@@ -110,11 +110,11 @@ canvas {
 }
 
 .dropzone {
-    min-height: 100px;
-    width: 40%;
-    margin-left: 30%;
-    background: #1e90ff;
-    padding: 30px 30px;
+    min-height: 70px;
+    width: 30%;
+    margin-left: 35%;
+    background: #89D7C9 ;
+    padding: 15px 15px;
     border-radius: 10px;
 }
 
@@ -144,8 +144,8 @@ canvas {
 
 .dropzone .dz-message {
     text-align: center;
-    margin: 2em 0;
-    font-size: 2em;
+    margin: 2em 1em;
+    font-size: 1.5em;
 }
 
 .dropzone .dz-preview {
@@ -414,7 +414,7 @@ canvas {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     width: 100%;
-    height: 99%;
+    height: 50%;
     position: absolute;
     z-index: 0;
 }
@@ -487,23 +487,24 @@ canvas {
 
 .sub-content {
     position: absolute;
-    top: 99%;
+    top: 50%;
     left: 0;
 }
 
 #info-flow {
     background-color: white;
-    padding: 60px 0;
+    padding: 60px 0 150px 0;
 }
 
 #info-flow h1 {
+    font-size: 2.0em;
     text-align: center;
     margin-bottom: 40px;
 }
 
 #info-flow img {
-    margin-left: 20%;
-    width: 60%;
+    margin-left: 30%;
+    width: 40%;
 }
 
 footer {
