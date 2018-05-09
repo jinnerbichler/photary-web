@@ -114,7 +114,7 @@ canvas {
 }
 
 .dropzone {
-    min-height: 70px;
+    min-height: 64px;
     width: 30%;
     margin-left: 35%;
     background: #89D7C9 ;
@@ -450,11 +450,18 @@ canvas {
     display: none;
     width: 40%;
     margin-left: 30%;
-    margin-top: 20px;
 }
 
 .alert h1 {
     font-size: 1.01rem;
+}
+
+.coming-area .alert {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 150px;
+    z-index: 100;
 }
 
 #meta-table tr {
