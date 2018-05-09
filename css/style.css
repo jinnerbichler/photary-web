@@ -105,6 +105,10 @@ canvas {
     vertical-align: bottom;
 }
 
+#logo-top {
+    width: 25%;
+}
+
 .dropzone, .dropzone * {
     box-sizing: border-box;
 }
